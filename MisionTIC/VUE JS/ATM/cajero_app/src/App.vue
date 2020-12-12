@@ -4,8 +4,8 @@
     <div class="header">
       <h1>Banco UN</h1>
         <nav>
-          <button v-on:click="init" v-if="is_auth" > Inicio </button> 
-          <button v-on:click="getBalance" v-if="is_auth" > Saldo </button> 
+          <button v-on:click="init" v-if="is_auth" > Inicio </button> <!-- llama a a funcion init que está en metodos metodos de la sección js de este archivo-->
+          <button v-on:click="getBalance" v-if="is_auth" > Saldo </button> <!--llama a la funcion getBalance que está en metodos de la sección js de este archivo-->
           <button v-if="is_auth" > Transacción </button>
           <button v-if="is_auth" >Cerrar Sesión</button>
         </nav>
@@ -36,7 +36,7 @@
     methods: {
       init: function(){
         if(this.$route.name != "user"){
-        let username = localStorage.getItem("current_username")
+        let username = localStorage.getItem("current_username")// a
         this.$router.push({name: "user", params: {username:username}})
       }  
 
@@ -45,15 +45,15 @@
       getBalance: function(){
         if(this.$route.name != "user_balance"){
           let username = localStorage.getItem("current_username")
-          this.$router.push({name:"user_balance", params:{username:username}})
+          this.$router.push({name:"user_balance", params:{username:username}})//llama a través de router con push la "ruta" del archivo router.js donde le dice a que componente va
           }
       },
     },
 
     beforeCreate: function(){
-      localStorage.setItem('current_username', 'camilo24')
+      localStorage.setItem('current_username', 'camilo24')// aqui quemamos camilo24 en la variable current_user,e sto hace que al iniciar la aplicacións e muestra camilo24
       localStorage.setItem('isAuth', true)
-      this.$router.push({name: "user", params:{username:'camilo24'}})
+      this.$router.push({name: "user", params:{username:'camilo24'}})//llamamos a la ruta con nombre user del router.js
     } 
 }
 

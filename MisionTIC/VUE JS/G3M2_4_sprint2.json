@@ -1,0 +1,75 @@
+{
+	"info": {
+		"_postman_id": "6ab73038-8126-451f-b63a-2c796612e400",
+		"name": "G3M2_4_sprint2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listar_reserva",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://app-reservastransilvaniav2.herokuapp.com/reserva/vista/rsrv05",
+					"protocol": "https",
+					"host": [
+						"app-reservastransilvaniav2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"reserva",
+						"vista",
+						"rsrv05"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear_reserva",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://app-reservastransilvaniav2.herokuapp.com/reserva/crear?nombre=Maria%20Gomez&identificacion=123347&fecha_inicio=18%2F12%2F2020&fecha_fin=01%2F01%2F2021&tipo_habitacion=Doble",
+					"protocol": "https",
+					"host": [
+						"app-reservastransilvaniav2",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"reserva",
+						"crear"
+					],
+					"query": [
+						{
+							"key": "nombre",
+							"value": "Maria%20Gomez"
+						},
+						{
+							"key": "identificacion",
+							"value": "123347"
+						},
+						{
+							"key": "fecha_inicio",
+							"value": "18%2F12%2F2020"
+						},
+						{
+							"key": "fecha_fin",
+							"value": "01%2F01%2F2021"
+						},
+						{
+							"key": "tipo_habitacion",
+							"value": "Doble"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
